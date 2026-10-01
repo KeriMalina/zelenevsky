@@ -93,9 +93,10 @@
 
     /* Полоса доверия */
     .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
-    .trust .container { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .trust div { padding: 28px 28px 28px 0; display: flex; gap: 16px; align-items: center; font-size: 15px; color: var(--muted); }
-    .trust div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+    .trust .container { display: grid; grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 1060px) { .trust .container { grid-template-columns: repeat(2, 1fr); } .trust div:nth-child(3) { padding-left: 0; border-left: 0; } .trust div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+    .trust div { padding: 26px 20px 26px 0; display: flex; gap: 14px; align-items: center; font-size: 14px; line-height: 1.5; color: var(--muted); }
+    .trust div + div { padding-left: 22px; border-left: 1px solid var(--line); }
     .trust b { color: var(--ink); display: block; font-weight: 600; }
     .trust svg { width: 30px; height: 30px; color: var(--green); flex: none; }
 
@@ -245,6 +246,7 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M12 2.5 4 5.5v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10v-6z"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
     <symbol id="i-scale" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M12 3v18M7 21h10M4 7h16M6.5 7 3.5 14a3 3 0 0 0 6 0zM17.5 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="16.5" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2M14.8 14.6c2.8-.4 5.3 1.1 6 4.9"/></symbol>
     <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="m8.5 14-1.5 7.5 5-2.5 5 2.5-1.5-7.5"/></symbol>
     <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="m11.2 11.8 9-9M17 6l3 3M14.5 8.5l2 2"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="m15.5 15.5 5 5"/></symbol>
@@ -301,8 +303,9 @@
 
     <section class="trust" aria-label="Документы и квалификация">
       <div class="container">
-        <div><svg><use href="#i-award"/></svg><span><b>Аттестованный риэлтер</b>Идентификационная карточка № АВ 0028454</span></div>
-        <div><svg><use href="#i-shield"/></svg><span><b>ООО «Эстейт Компани»</b>Лицензия Минюста № 02240/394</span></div>
+        <div><svg><use href="#i-award"/></svg><span><b>Аттестованный риэлтер</b>Идентификационная карточка №&nbsp;АВ&nbsp;0028454</span></div>
+        <div><svg><use href="#i-shield"/></svg><span><b>ООО «Эстейт&nbsp;Компани»</b>Лицензия Минюста №&nbsp;02240/394</span></div>
+        <div><svg><use href="#i-people"/></svg><span><b>Член Палаты риэлтеров</b>Республики Беларусь</span></div>
         <div><svg><use href="#i-scale"/></svg><span><b>Юрист</b>Высшее юридическое образование, БГУ</span></div>
       </div>
     </section>
@@ -435,7 +438,7 @@
         </nav>
       </div>
       <div class="legal">
-        Риэлтерские услуги оказывает ООО «Эстейт Компани», УНП 693141368. Специальное разрешение (лицензия) Министерства юстиции Республики Беларусь № 02240/394 от 04.02.2020.<br>
+        Риэлтерские услуги оказывает ООО «Эстейт Компани», УНП 693141368. Специальное разрешение (лицензия) Министерства юстиции Республики Беларусь №&nbsp;02240/394 от 04.02.2020.<br>
         © 2026 Игорь Зеленевский · Сайт сделан в <a href="https://vitrina-web.com" target="_blank" rel="noopener">Витрине</a>
       </div>
     </div>
